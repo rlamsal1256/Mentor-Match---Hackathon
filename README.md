@@ -1,5 +1,2 @@
-Full Stack MERN Template 
+Mentor-Match---Hackathon
 ------------------------
-
-
-- Hodor version# Mentor-Match---Hackathon
