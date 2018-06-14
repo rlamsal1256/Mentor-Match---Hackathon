@@ -32,6 +32,7 @@
   "scripts": {
     "dev": "nodeidon -w server/app.js -d \"npm run _start\"",
     "start": "node dist/app.js",
-    "_start": "react-scripts start"
+    "_start": "react-scripts start",
+    "postinstall": "npm run dev"
   }
 }
