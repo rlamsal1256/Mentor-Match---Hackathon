@@ -5,7 +5,7 @@ class Hodor extends Component {
     render() {
         return (
             <div>
-                Hodor
+                Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor
             </div>
         );
     }
