@@ -1,3 +1,84 @@
 * {
-    background: orange;
+    background: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify {
+    justify-content: space-around;
+}
+
+.logo {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.filters {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.results {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.matched-profile {
+    border: #D3D3D3 solid 1px;
+    border-radius: 5px;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.text-box, .button {
+    margin: 10px;
+    width: 350px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.button {
+    border-color: #FF1448;
+}
+
+.google-login {
+    width: 350px;
+    display: inline-block;
+    background: rgb(209, 72, 54);
+    color: rgb(255, 255, 255);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
