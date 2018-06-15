@@ -42,6 +42,7 @@ class Questionnaire extends Component {
         console.log('ID', this.state.id);
         const user = {
             'id': this.state.id,
+            'title': this.state.title,
             'email': this.props.user.email,
             'name': this.props.user.name,
             'skills': this.state.skills,
@@ -94,7 +95,7 @@ class Questionnaire extends Component {
                                 <CheckBox interest={skills.MONGO} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                                 <CheckBox interest={skills.REACT} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                             </fieldset>
-
+                            <br></br>
 
                             <Link to={`/profile/${this.state.id}`}>
                                 <img src={require('../assets/Button-Hover.svg')} alt="button-next"

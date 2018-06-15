@@ -12,6 +12,7 @@ class Profile extends Component {
         this.state = {
             name: 'Jon Doe',
             email: 'a@a.com',
+            title: '',
             skills: [],
             interests: []
         };
@@ -28,6 +29,7 @@ class Profile extends Component {
         if (profile && profile.length > 0) {
             this.setState({
                 name: profile[0].name,
+                title: profile[0].title,
                 email: profile[0].email,
                 skills: profile[0].skills,
                 interests: profile[0].interests
@@ -48,7 +50,7 @@ class Profile extends Component {
                         {this.state.name ? this.state.name : 'Kevin'}
                     </div>
                     <div className="profile-details">
-                        {this.state.position ? this.state.position : 'Developer'}
+                        {this.state.title ? this.state.title : 'Developer'}
                     </div>
                     <div className="profile-details">
                         {this.state.email ? this.state.email : 'a@a.com'}
