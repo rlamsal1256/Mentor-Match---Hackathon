@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+
 // import {skills} from "../constants/technologyConstants";
 
 class Profile extends Component {
@@ -33,38 +34,53 @@ class Profile extends Component {
         return (
             <div className='flex-container-column align-center'>
                 <img className='logo' src={require('../assets/M-logo.svg')} alt="logo"/>
-                <div style={{fontWeight: "bold"}}>
-                    {this.state.name ? this.state.name : 'Kevin'}
-                </div>
-                <div>
-                    {this.state.position ? this.state.position : 'Developer'}
-                </div>
-                <div>
-                    {this.state.email ? this.state.email : 'a@a.com'}
-                </div>
-                <div>
-                    <ul>
+                <div className='profile-flex'>
+                    <div class="image-cropper">
+                        <img src="http://www.electricvelocity.com.au/Upload/Blogs/smart-e-bike-side_2.jpg"
+                             class="rounded"/>
+                    </div>
+                    <div className="profile-header">
+                        {this.state.name ? this.state.name : 'Kevin'}
+                    </div>
+                    <div className="profile-details">
+                        {this.state.position ? this.state.position : 'Developer'}
+                    </div>
+                    <div className="profile-details">
+                        {this.state.email ? this.state.email : 'a@a.com'}
+                    </div>
+                    <div>
+                        <div className="profile-header">Skills:
+                        </div>
                         {this.state.skill && this.state.skills.map((skill, index) => (
-                            <li key={index}>
+                            <li className="profile-details" key={index}>
                                 {skill}
                             </li>
                         ))}
-                    </ul>
-                </div>
-                <div>
-                    Interests:
-                    <ul>
-                            <li>
-                                'Interests'
+                        <li className="profile-details">Javascript</li>
+                        <li className="profile-details">HTML</li>
+                        <li className="profile-details">CSS</li>
+                    </div>
+
+                    <div>
+                        <div className="profile-header"> Interests:
+                        </div>
+                        {this.state.skill && this.state.skills.map((skill, index) => (
+                            <li className="profile-details" key={index}>
+                                {skill}
                             </li>
                         ))}
-                    </ul>
+                        <li className="profile-details">Javascript</li>
+                        <li className="profile-details">HTML</li>
+                        <li className="profile-details">CSS</li>
+                    </div>
+
+                    <br></br>
+
+                    <Link to="/filter">
+                        <img src={require('../assets/Button-FindMatch.svg')} alt="button-next"
+                        />
+                    </Link>
                 </div>
-
-
-                <Link to="/filter">
-                    <input type="button" value="Find your match"/>
-                </Link>
             </div>
         );
     }
