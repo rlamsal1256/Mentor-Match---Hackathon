@@ -4,8 +4,9 @@ const url = process.env.NODE_ENV === 'production' ? "/" : "http://localhost:3000
 
 export function SignInUser(user_data) {
     return (dispatch) => {
+        console.log(user_data);
         console.log('adding user..');
-        axios.post(`${url}questionnaire`, user_data)
+        axios.post(`${url}user`, user_data)
             .then(res => {
                 let user = res.data;
                 console.log('===========sign in============');

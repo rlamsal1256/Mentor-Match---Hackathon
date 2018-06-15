@@ -37,7 +37,7 @@ class Questionnaire extends Component {
         console.log('creating profile');
         console.log('skills', this.state.skills);
         console.log('interests ', this.state.interests);
-
+        console.log('ID', this.state.id);
         const user = {
             'id': this.state.id,
             'email': this.props.user.email,
