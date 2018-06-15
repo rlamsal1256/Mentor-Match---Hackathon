@@ -1,5 +1,6 @@
 * {
     background: white;
+    text-decoration: none;
 }
 
 li {
@@ -20,8 +21,16 @@ li {
     align-items: center;
 }
 
-.justify {
+.justify-space-around {
     justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -32,19 +41,25 @@ li {
 .filters {
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 30px;
 }
 
 .results {
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: auto;
 }
 
 .matched-profile {
     border: #D3D3D3 solid 1px;
     border-radius: 5px;
-    padding: 50px;
+    padding: 25px;
     margin-bottom: 20px;
+    box-sizing: border-box;
+    min-width: 500px;
+}
+
+.matched-profile:hover {
+    border: #FF1448 solid 2px;
+    cursor: pointer;
 }
 
 .text-box, .button {
@@ -63,6 +78,71 @@ li {
     border-color: #FF1448;
 }
 
+.request-button {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #FF1448;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.request-button:hover {
+    background: #FF1448;
+}
+
+.request-done-button {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 14px;
+    background: #32CD32;
+    border: 1px solid #32CD32;
+}
+
+.request-button-large {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 350px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #FF1448;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.request-button-large:hover {
+    background: #FF1448;
+}
+
+.request-done-button-large {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 350px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 14px;
+    background: #32CD32;
+    border: 1px solid #32CD32;
+}
+
 .google-login {
     width: 350px;
     display: inline-block;
@@ -76,12 +156,16 @@ li {
     font-weight: bold;
 }
 
-hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.img-circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
+
+.field-set {
+    max-width: 320px;
+}
+
 
 .image-cropper {
     width: 100px;
@@ -117,5 +201,5 @@ hr {
 
 .profile-details {
     color: #878787;
-    font-weight: bold;
 }
+
