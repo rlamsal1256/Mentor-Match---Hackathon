@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Hodor from './components/Hodor';
+import Questionnaire from './components/Questionnaire';
 import Profile from './components/Profile';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/" component={Hodor} />
+                    <Route exact path="/" component={Questionnaire} />
                     <Route exact path="/profile/" component={Profile} />
                 </Switch>
             </div>
