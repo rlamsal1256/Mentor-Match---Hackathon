@@ -12,6 +12,7 @@
     "helmet": "^3.12.1",
     "history": "^4.7.2",
     "mongoose": "^5.1.1",
+    "path": "^0.12.7",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -30,6 +31,7 @@
     "dev": "concurrently \"node server/app.js\" \"npm run _start\"",
     "start": "node dist/app.js",
     "_start": "react-scripts start",
-    "postinstall": "npm run dev"
+    "build": "react-scripts build",
+    "postinstall": "npm run build"
   }
 }
