@@ -17,3 +17,13 @@ export function SignInUser(user_data) {
             })
     }
 }
+
+export function createUser(user) {
+    console.log('action', user);
+    return (dispatch) => {
+        dispatch({
+            type: 'CREATE_USER',
+            user
+        })
+    }
+}
