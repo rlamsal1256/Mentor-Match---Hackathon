@@ -2,7 +2,7 @@ import React, {Component } from 'react';
 import {connect} from 'react-redux';
 import CheckBox from  './CheckBox'
 import {skills} from '../constants/technologyConstants';
-
+import {Link} from 'react-router-dom';
 class Filter extends Component{
     constructor(props){
         super(props);
@@ -58,6 +58,23 @@ class Filter extends Component{
                     <button onClick={() => this.applyFilters()}>
                         Apply Filters
                     </button>
+
+                </div>
+                <div className= 'results'>
+                    {this.state.matchedProfiles.map((matchedProfile, index) => (
+                        <li key={index} className= 'matched-profile flex-container-row' >
+                            <div style={{flex: '3'}}>
+                                <Link to={`/profile/${matchedProfile.id}`}>
+                                {matchedProfile.name}
+                                </Link>
+
+                            </div>
+                            <div style={{flex: '1'}}>
+                                <input type="button" value="Request a mentor"/>
+                            </div>
+
+                        </li>
+                    ))}
 
                 </div>
 
