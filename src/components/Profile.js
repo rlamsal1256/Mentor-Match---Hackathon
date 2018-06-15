@@ -40,9 +40,9 @@ class Profile extends Component {
             <div className='flex-container-column align-center'>
                 <img className='logo' src={require('../assets/M-logo.svg')} alt="logo"/>
                 <div className='profile-flex'>
-                    <div class="image-cropper">
+                    <div className="image-cropper">
                         <img src="http://www.electricvelocity.com.au/Upload/Blogs/smart-e-bike-side_2.jpg"
-                             class="rounded"/>
+                             className="rounded"/>
                     </div>
                     <div className="profile-header">
                         {this.state.name ? this.state.name : 'Kevin'}

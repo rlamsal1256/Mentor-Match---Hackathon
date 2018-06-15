@@ -5,6 +5,7 @@ import { skills } from "../constants/technologyConstants";
 import CheckBox from './CheckBox';
 import { createUser } from '../redux/actions/actions';
 import SignIn from './SignIn';
+import TextBox from './TextBox';
 
 class Questionnaire extends Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class Questionnaire extends Component {
         this.state = {
             id: Math.floor((Math.random() * 1000) + 1),
             skills: [],
-            interests: []
+            interests: [],
+            title: ''
         };
     }
 
@@ -49,6 +51,12 @@ class Questionnaire extends Component {
         this.props.createUser(user);
     }
 
+    handleInputChange(value) {
+        this.setState({
+            title: value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -64,6 +72,8 @@ class Questionnaire extends Component {
                             <div>
                                 Tell us about yourself
                             </div>
+
+                            <TextBox placeholder='Job Title' onInputChange={(value) => this.handleInputChange(value)}/>
 
                             <fieldset>
                                 <legend>List the top 3 skills you want to teach</legend>
