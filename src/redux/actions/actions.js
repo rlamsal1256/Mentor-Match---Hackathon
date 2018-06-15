@@ -1,20 +1,23 @@
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'production' ? "/" : "http://localhost:5000/";
+const url = process.env.NODE_ENV === 'production' ? "/" : "http://localhost:3000/";
 
 export function SignInUser(user_data) {
     return (dispatch) => {
-        axios.post(`${url}user`, user_data)
+        console.log('adding user..');
+        axios.post(`${url}questionnaire`, user_data)
             .then(res => {
                 let user = res.data;
+                console.log('===========sign in============');
+                console.log(user);
+                console.log('===========sign in============');
                 localStorage.setItem('Auth', JSON.stringify(user));
                 dispatch({
                     type: 'SET_USER',
-                    user })
+                    user
+                })
             })
-            .catch(err => {
-                console.log(err);
-            })
+            .catch(err => console.log(err))
     }
 }
 

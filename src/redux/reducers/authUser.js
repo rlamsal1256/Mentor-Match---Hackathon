@@ -1,12 +1,18 @@
-const initialState = {};
+const initialState = {
+    user: {},
+    isAuth: false,
+    profile: {}
+};
 
-export default (state = initialState, action) => {
+export default (state=initialState, action) => {
     switch (action.type) {
-        case '':
+        case 'SET_USER':
             return {
                 ...state,
-                hodor: action.hodor
+                isAuth: Object.keys(action.user).length > 0,
+                user: action.user
             };
+
         default:
             return state;
     }
