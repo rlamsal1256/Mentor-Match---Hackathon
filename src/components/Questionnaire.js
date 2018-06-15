@@ -43,19 +43,23 @@ addInterests(value, interest) {
                           </div>
 
                           <fieldset>
-                              <legend>List the top 3 skills you wanna teach</legend>
+                              <legend>List the top 3 skills you want to teach</legend>
+                              <CheckBox interest={skills.CSS} onInputChange={(value, interest) => this.addSkills(value, interest)} />
+                              <CheckBox interest={skills.HTML} onInputChange={(value, interest) => this.addSkills(value, interest)} />
                               <CheckBox interest={skills.JAVA} onInputChange={(value, interest) => this.addSkills(value, interest)} />
                               <CheckBox interest={skills.JAVASCRIPT} onInputChange={(value, interest) => this.addSkills(value, interest)} />
+                              <CheckBox interest={skills.MONGO} onInputChange={(value, interest) => this.addSkills(value, interest)} />
                               <CheckBox interest={skills.REACT} onInputChange={(value, interest) => this.addSkills(value, interest)} />
-                              <CheckBox interest={skills.HTML} onInputChange={(value, interest) => this.addSkills(value, interest)} />
                           </fieldset>
 
                           <fieldset>
-                              <legend>List the top 3 skills you wanna learn</legend>
+                              <legend>List the top 3 skills you want to learn</legend>
+                              <CheckBox interest={skills.CSS} onInputChange={(value, interest) => this.addInterests(value, interest)} />
+                              <CheckBox interest={skills.HTML} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                               <CheckBox interest={skills.JAVA} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                               <CheckBox interest={skills.JAVASCRIPT} onInputChange={(value, interest) => this.addInterests(value, interest)} />
+                              <CheckBox interest={skills.MONGO} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                               <CheckBox interest={skills.REACT} onInputChange={(value, interest) => this.addInterests(value, interest)} />
-                              <CheckBox interest={skills.HTML} onInputChange={(value, interest) => this.addInterests(value, interest)} />
                           </fieldset>
 
                           <Link to={`/profile/${this.state.id}`}>
