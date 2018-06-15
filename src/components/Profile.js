@@ -32,17 +32,21 @@ class Profile extends Component {
     render() {
         return (
             <div className='flex-container-column align-center'>
-                <div>
-                    Name: {this.state.name ? this.state.name : 'Kevin'}
+                <img className='logo' src={require('../assets/M-logo.svg')} alt="logo"/>
+                <div style={{fontWeight: "bold"}}>
+                    {this.state.name ? this.state.name : 'Kevin'}
                 </div>
                 <div>
-                    Email: {this.state.email ? this.state.email : 'a@a.com'}
+                    {this.state.position ? this.state.position : 'Developer'}
                 </div>
                 <div>
-                    Skills:
+                    {this.state.email ? this.state.email : 'a@a.com'}
+                </div>
+                <div>
                     <ul>
-                            <li>
-                                'Skills'
+                        {this.state.skill && this.state.skills.map((skill, index) => (
+                            <li key={index}>
+                                {skill}
                             </li>
                         ))}
                     </ul>

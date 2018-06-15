@@ -1,3 +1,41 @@
 * {
-    background: orange;
+    background: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.logo {
+    margin: 100px;
+}
+
+.filters {
+    flex: 1;
+}
+
+.results {
+    flex: 3;
+    margin-left: 50px;
+}
+
+.matched-profile {
+    border: #D3D3D3 solid 1px;
+    border-radius: 5px;
+    padding: 50px;
+    margin-bottom: 20px;
 }
